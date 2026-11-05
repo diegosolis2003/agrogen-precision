@@ -1,0 +1,96 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <radialGradient id="bg" cx="0.4" cy="0.3" r="0.95">
+      <stop offset="0" stop-color="#45603c" />
+      <stop offset="0.55" stop-color="#24391f" />
+      <stop offset="1" stop-color="#0d170c" />
+    </radialGradient>
+    <linearGradient id="leaf" x1="0.25" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#4f8f4a" />
+      <stop offset="0.45" stop-color="#2f6b3a" />
+      <stop offset="1" stop-color="#194a2d" />
+    </linearGradient>
+    <linearGradient id="leafDark" x1="0.25" y1="0" x2="0.8" y2="1">
+      <stop offset="0" stop-color="#3f7a3e" />
+      <stop offset="1" stop-color="#15402a" />
+    </linearGradient>
+    <radialGradient id="rust" cx="0.4" cy="0.35" r="0.7">
+      <stop offset="0" stop-color="#ffce62" />
+      <stop offset="0.5" stop-color="#f0922d" />
+      <stop offset="1" stop-color="#b45a18" stop-opacity="0.15" />
+    </radialGradient>
+    <filter id="blur24" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="26" />
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="12" dy="24" stdDeviation="18" flood-color="#03100a" flood-opacity="0.6" />
+    </filter>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+    <radialGradient id="vignette" cx="0.5" cy="0.45" r="0.75">
+      <stop offset="0.55" stop-color="#000" stop-opacity="0" />
+      <stop offset="1" stop-color="#03100a" stop-opacity="0.75" />
+    </radialGradient>
+    <path id="coffeeLeaf" d="M0 0C-70-38-132-116-142-208c-10-92 40-158 142-196 102 38 152 104 142 196C132-116 70-38 0 0Z" />
+    <g id="rustSpot">
+      <circle r="25" fill="#f0932f" opacity="0.16" />
+      <circle r="13" fill="url(#rust)" />
+      <circle cx="3" cy="-2" r="6" fill="#ffd77d" opacity="0.75" />
+      <circle cx="-4" cy="5" r="3.4" fill="#d16c18" opacity="0.8" />
+      <circle cx="9" cy="6" r="2.4" fill="#c9771c" opacity="0.7" />
+    </g>
+  </defs>
+
+  <rect width="800" height="800" fill="url(#bg)" />
+  <circle cx="120" cy="620" r="150" fill="#9c7957" opacity="0.22" filter="url(#blur24)" />
+  <circle cx="690" cy="150" r="170" fill="#f4c95d" opacity="0.1" filter="url(#blur24)" />
+  <circle cx="660" cy="620" r="150" fill="#52b788" opacity="0.14" filter="url(#blur24)" />
+
+  <g filter="url(#shadow)">
+    <path d="M92 748C208 626 318 534 462 430c94-68 164-150 210-244" fill="none" stroke="#6e4b2f" stroke-width="20" stroke-linecap="round" />
+    <path d="M250 592c18 44 20 92 10 142M392 486c-6 52 6 96 24 134M532 372c10 48 34 84 68 112" fill="none" stroke="#5b3e29" stroke-width="8" stroke-linecap="round" />
+
+    <g transform="translate(468 438) rotate(78)">
+      <use href="#coffeeLeaf" fill="url(#leaf)" />
+      <path d="M0 4c-4-62-2-126 0-186M0 238c-40-26-70-60-88-100M0 260c40-26 70-60 88-100M0 330c-28-20-50-46-64-78M0 344c28-20 50-46 64-78" fill="none" stroke="#9ecf83" stroke-width="5" stroke-linecap="round" opacity="0.42" />
+      <g transform="translate(-38 214) rotate(-18)"><use href="#rustSpot" transform="scale(0.9)" /></g>
+      <g transform="translate(28 268) rotate(12)"><use href="#rustSpot" transform="scale(1.15)" /></g>
+      <g transform="translate(-54 302) rotate(24)"><use href="#rustSpot" transform="scale(0.8)" /></g>
+      <g transform="translate(14 348) rotate(-6)"><use href="#rustSpot" transform="scale(0.7)" /></g>
+      <g transform="translate(-18 172) rotate(30)"><use href="#rustSpot" transform="scale(0.62)" /></g>
+    </g>
+
+    <g transform="translate(410 462) rotate(24) scale(0.88)">
+      <use href="#coffeeLeaf" fill="url(#leafDark)" />
+      <path d="M0 4c-4-62-2-126 0-186M0 238c-40-26-70-60-88-100M0 260c40-26 70-60 88-100" fill="none" stroke="#9ecf83" stroke-width="5" stroke-linecap="round" opacity="0.35" />
+      <g transform="translate(-24 250) rotate(8)"><use href="#rustSpot" transform="scale(0.95)" /></g>
+      <g transform="translate(36 300) rotate(-14)"><use href="#rustSpot" transform="scale(0.7)" /></g>
+      <g transform="translate(-46 340) rotate(18)"><use href="#rustSpot" transform="scale(0.55)" /></g>
+    </g>
+
+    <g transform="translate(550 360) rotate(122) scale(0.72)">
+      <use href="#coffeeLeaf" fill="url(#leafDark)" />
+      <path d="M0 4c-4-62-2-126 0-186M0 238c-40-26-70-60-88-100M0 260c40-26 70-60 88-100" fill="none" stroke="#9ecf83" stroke-width="6" stroke-linecap="round" opacity="0.35" />
+      <g transform="translate(18 190) rotate(-20)"><use href="#rustSpot" transform="scale(0.8)" /></g>
+      <g transform="translate(-30 250) rotate(10)"><use href="#rustSpot" transform="scale(0.6)" /></g>
+    </g>
+
+    <g transform="translate(250 610) rotate(-46) scale(0.84)">
+      <use href="#coffeeLeaf" fill="url(#leaf)" />
+      <path d="M0 4c-4-62-2-126 0-186M0 238c-40-26-70-60-88-100M0 260c40-26 70-60 88-100" fill="none" stroke="#9ecf83" stroke-width="5" stroke-linecap="round" opacity="0.4" />
+    </g>
+
+    <g>
+      <circle cx="336" cy="548" r="15" fill="#c0392b" opacity="0.9" />
+      <circle cx="366" cy="562" r="13" fill="#a93226" opacity="0.9" />
+      <circle cx="338" cy="580" r="11" fill="#d3543f" opacity="0.9" />
+      <circle cx="362" cy="590" r="8" fill="#8e2b1e" opacity="0.9" />
+      <path d="M352 548c-6 16-10 32-12 50" stroke="#7f3b1d" stroke-width="3" fill="none" opacity="0.5" />
+    </g>
+  </g>
+
+  <rect width="800" height="800" filter="url(#noise)" opacity="0.07" />
+  <rect width="800" height="800" fill="url(#vignette)" />
+</svg>

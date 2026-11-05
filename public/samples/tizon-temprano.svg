@@ -1,0 +1,97 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <radialGradient id="bg" cx="0.35" cy="0.3" r="0.9">
+      <stop offset="0" stop-color="#3c6146" />
+      <stop offset="0.55" stop-color="#203c2c" />
+      <stop offset="1" stop-color="#0b1a12" />
+    </radialGradient>
+    <linearGradient id="leaf" x1="0.2" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#6fae63" />
+      <stop offset="0.45" stop-color="#43834a" />
+      <stop offset="1" stop-color="#225c39" />
+    </linearGradient>
+    <radialGradient id="lesion" cx="0.4" cy="0.35" r="0.75">
+      <stop offset="0" stop-color="#a8663a" />
+      <stop offset="0.55" stop-color="#77401f" />
+      <stop offset="1" stop-color="#4e2914" />
+    </radialGradient>
+    <filter id="blur30" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="34" />
+    </filter>
+    <filter id="blur10" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="10" />
+    </filter>
+    <filter id="leafShadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="10" dy="22" stdDeviation="16" flood-color="#04120c" flood-opacity="0.55" />
+    </filter>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+    <radialGradient id="vignette" cx="0.5" cy="0.45" r="0.75">
+      <stop offset="0.55" stop-color="#000" stop-opacity="0" />
+      <stop offset="1" stop-color="#03100a" stop-opacity="0.72" />
+    </radialGradient>
+    <path
+      id="leaflet"
+      d="M0 0C-20-30-58-62-66-108c-6-36 10-64 34-86 6-32 20-58 32-84 12 26 26 52 32 84 24 22 40 50 34 86-8 46-46 78-66 108Z"
+    />
+    <g id="spot">
+      <circle r="48" fill="#d8b45c" opacity="0.22" />
+      <circle r="30" fill="url(#lesion)" />
+      <circle r="30" fill="none" stroke="#3d200f" stroke-width="4" opacity="0.7" />
+      <circle r="21" fill="none" stroke="#3d200f" stroke-width="3" opacity="0.65" />
+      <circle r="11" fill="none" stroke="#3d200f" stroke-width="3" opacity="0.6" />
+      <circle cx="-7" cy="-9" r="3.5" fill="#c9975b" opacity="0.7" />
+    </g>
+  </defs>
+
+  <rect width="800" height="800" fill="url(#bg)" />
+  <circle cx="150" cy="160" r="130" fill="#93c47d" opacity="0.18" filter="url(#blur30)" />
+  <circle cx="680" cy="220" r="160" fill="#f4c95d" opacity="0.1" filter="url(#blur30)" />
+  <circle cx="660" cy="660" r="180" fill="#52b788" opacity="0.14" filter="url(#blur30)" />
+  <circle cx="240" cy="690" r="100" fill="#7f5539" opacity="0.28" filter="url(#blur30)" />
+
+  <g transform="rotate(-9 400 400)" filter="url(#leafShadow)">
+    <path d="M408 720C400 600 398 480 406 352c6-92 12-172 8-244" fill="none" stroke="#2f6b3f" stroke-width="12" stroke-linecap="round" />
+    <g>
+      <use href="#leaflet" transform="translate(410 648) scale(1.02)" fill="url(#leaf)" />
+      <path d="M410 646c-4-84-2-168 0-256M410 460c-26-14-44-34-58-60M410 500c26-14 44-34 58-60M410 380c-18-10-32-26-42-46M410 410c18-10 32-26 42-46" fill="none" stroke="#285f3b" stroke-width="5" stroke-linecap="round" opacity="0.55" />
+    </g>
+    <g transform="translate(410 560) rotate(48) scale(0.8)">
+      <use href="#leaflet" fill="url(#leaf)" />
+      <path d="M0 0c-2-64 0-130 0-200M0 152c-20-10-34-26-46-48M0 180c20-10 34-26 46-48" fill="none" stroke="#285f3b" stroke-width="6" stroke-linecap="round" opacity="0.5" />
+    </g>
+    <g transform="translate(410 560) rotate(-48) scale(0.8)">
+      <use href="#leaflet" fill="url(#leaf)" />
+      <path d="M0 0c-2-64 0-130 0-200M0 152c-20-10-34-26-46-48M0 180c20-10 34-26 46-48" fill="none" stroke="#285f3b" stroke-width="6" stroke-linecap="round" opacity="0.5" />
+    </g>
+    <g transform="translate(412 472) rotate(70) scale(0.62)">
+      <use href="#leaflet" fill="url(#leaf)" />
+      <path d="M0 0c-2-64 0-130 0-200M0 152c-20-10-34-26-46-48" fill="none" stroke="#285f3b" stroke-width="7" stroke-linecap="round" opacity="0.5" />
+    </g>
+    <g transform="translate(412 472) rotate(-70) scale(0.62)">
+      <use href="#leaflet" fill="url(#leaf)" />
+      <path d="M0 0c-2-64 0-130 0-200M0 152c-20-10-34-26-46-48" fill="none" stroke="#285f3b" stroke-width="7" stroke-linecap="round" opacity="0.5" />
+    </g>
+    <g transform="translate(408 356) rotate(24) scale(0.4)">
+      <use href="#leaflet" fill="url(#leaf)" />
+    </g>
+    <g transform="translate(408 356) rotate(-24) scale(0.4)">
+      <use href="#leaflet" fill="url(#leaf)" />
+    </g>
+
+    <use href="#spot" transform="translate(378 452) rotate(-10) scale(0.95)" />
+    <use href="#spot" transform="translate(462 512) rotate(14) scale(0.78)" />
+    <use href="#spot" transform="translate(404 572) rotate(6) scale(1.12)" />
+    <use href="#spot" transform="translate(522 394) rotate(-18) scale(0.7)" />
+    <use href="#spot" transform="translate(318 430) rotate(22) scale(0.82)" />
+    <use href="#spot" transform="translate(566 468) rotate(8) scale(0.55)" />
+    <use href="#spot" transform="translate(342 590) rotate(-14) scale(0.5)" />
+    <circle cx="470" cy="610" r="9" fill="#3d200f" opacity="0.55" />
+    <circle cx="348" cy="508" r="6" fill="#3d200f" opacity="0.45" />
+  </g>
+
+  <rect width="800" height="800" filter="url(#noise)" opacity="0.07" />
+  <rect width="800" height="800" fill="url(#vignette)" />
+</svg>

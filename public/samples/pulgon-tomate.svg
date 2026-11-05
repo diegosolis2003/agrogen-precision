@@ -1,0 +1,81 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 800" width="800" height="800">
+  <defs>
+    <radialGradient id="bg" cx="0.4" cy="0.25" r="0.95">
+      <stop offset="0" stop-color="#628a52" />
+      <stop offset="0.55" stop-color="#2f5035" />
+      <stop offset="1" stop-color="#0e1d12" />
+    </radialGradient>
+    <linearGradient id="leaf" x1="0.15" y1="0" x2="0.85" y2="1">
+      <stop offset="0" stop-color="#9ed47c" />
+      <stop offset="0.4" stop-color="#6bb55f" />
+      <stop offset="1" stop-color="#387b42" />
+    </linearGradient>
+    <radialGradient id="curlShadow" cx="0.5" cy="0.4" r="0.6">
+      <stop offset="0" stop-color="#1d4a2a" stop-opacity="0.65" />
+      <stop offset="1" stop-color="#1d4a2a" stop-opacity="0" />
+    </radialGradient>
+    <filter id="blur26" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="28" />
+    </filter>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="10" dy="22" stdDeviation="16" flood-color="#04120c" flood-opacity="0.55" />
+    </filter>
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="3" stitchTiles="stitch" />
+      <feColorMatrix type="saturate" values="0" />
+    </filter>
+    <radialGradient id="vignette" cx="0.5" cy="0.45" r="0.75">
+      <stop offset="0.55" stop-color="#000" stop-opacity="0" />
+      <stop offset="1" stop-color="#03100a" stop-opacity="0.72" />
+    </radialGradient>
+    <g id="aphid">
+      <ellipse rx="11" ry="16" fill="#b6df86" />
+      <ellipse cx="-2" cy="-5" rx="6" ry="8" fill="#d4eda9" opacity="0.9" />
+      <circle cx="0" cy="-17" r="5.4" fill="#93c46a" />
+      <path d="M-2-21c-6-10-8-14-4-20M3-21c5-9 8-13 5-20" fill="none" stroke="#5a8d48" stroke-width="2" stroke-linecap="round" />
+      <path d="M-9-5c-8 2-10 8-12 13M9-5c8 2 10 8 12 13M-8 7c-7 4-8 10-8 15M8 7c7 4 8 10 8 15" fill="none" stroke="#6f9d50" stroke-width="1.8" stroke-linecap="round" opacity="0.8" />
+    </g>
+  </defs>
+
+  <rect width="800" height="800" fill="url(#bg)" />
+  <circle cx="130" cy="150" r="150" fill="#d8f3dc" opacity="0.14" filter="url(#blur26)" />
+  <circle cx="690" cy="250" r="170" fill="#f4c95d" opacity="0.12" filter="url(#blur26)" />
+  <circle cx="690" cy="660" r="160" fill="#7f5539" opacity="0.24" filter="url(#blur26)" />
+
+  <g filter="url(#shadow)">
+    <path d="M412 780c-14-118 8-232 20-336 14-114 24-210 4-318" fill="none" stroke="#3e7a3f" stroke-width="14" stroke-linecap="round" />
+    <path
+      d="M430 770c-110-48-202-138-238-256-34-112 10-222 118-292 40-26 82-38 120-34 84 8 146 70 164 154 24 110-24 220-116 306-18 16-32 42-34 66-4 26-2 40-14 56Z"
+      fill="url(#leaf)"
+    />
+    <path
+      d="M426 760c-20-90 0-168 14-250 16-92 24-180 4-266M420 570c-58-18-104-54-136-104M436 500c60-20 108-58 142-112M430 650c-62-12-112-42-150-86M438 412c48-16 88-44 118-86M430 320c-34-10-60-32-78-62"
+      fill="none"
+      stroke="#2d6a3c"
+      stroke-width="6"
+      stroke-linecap="round"
+      opacity="0.5"
+    />
+    <path d="M470 330c62 44 92 110 82 186-8 68-50 128-116 168 36-64 48-132 42-202-4-56-10-108-8-152Z" fill="#1f572f" opacity="0.38" />
+    <ellipse cx="560" cy="438" rx="96" ry="64" fill="url(#curlShadow)" transform="rotate(-28 560 438)" />
+
+    <g transform="translate(398 486) rotate(-16)"><use href="#aphid" transform="scale(0.92)" /></g>
+    <g transform="translate(430 508) rotate(12)"><use href="#aphid" /></g>
+    <g transform="translate(462 486) rotate(-24)"><use href="#aphid" transform="scale(0.85)" /></g>
+    <g transform="translate(480 526) rotate(20)"><use href="#aphid" transform="scale(1.05)" /></g>
+    <g transform="translate(350 522) rotate(8)"><use href="#aphid" transform="scale(0.9)" /></g>
+    <g transform="translate(390 550) rotate(-12)"><use href="#aphid" transform="scale(0.78)" /></g>
+    <g transform="translate(438 562) rotate(28)"><use href="#aphid" transform="scale(0.95)" /></g>
+    <g transform="translate(512 500) rotate(-18)"><use href="#aphid" transform="scale(0.7)" /></g>
+    <g transform="translate(330 580) rotate(16)"><use href="#aphid" transform="scale(0.8)" /></g>
+    <g transform="translate(478 600) rotate(-8)"><use href="#aphid" transform="scale(0.88)" /></g>
+    <g transform="translate(410 610) rotate(18)"><use href="#aphid" transform="scale(0.72)" /></g>
+    <g transform="translate(548 552) rotate(-22)"><use href="#aphid" transform="scale(0.66)" /></g>
+
+    <ellipse cx="470" cy="640" rx="34" ry="12" fill="#fff3b0" opacity="0.3" transform="rotate(-12 470 640)" />
+    <ellipse cx="360" cy="608" rx="20" ry="8" fill="#fff3b0" opacity="0.25" transform="rotate(8 360 608)" />
+  </g>
+
+  <rect width="800" height="800" filter="url(#noise)" opacity="0.07" />
+  <rect width="800" height="800" fill="url(#vignette)" />
+</svg>
